@@ -1,8 +1,75 @@
 # DevHub by Jni
 
-## Move Package
+Welcome to the **DevHub DApp By Jni** project repository! This decentralized application (DApp) leverages blockchain technology to implement an devhub platform on the Sui network. Developers can add their contact details so that recruiters can contact them.
 
-Use SuiBase to install the development environment https://suibase.io/how-to/install.html#requirements
+## Table of Contents
+
+- [DevHub by Jni](#devhub-by-jni)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [Usage](#usage)
+  - [Smart Contracts](#smart-contracts)
+  - [Frontend](#frontend)
+    - [Configuration](#configuration)
+    - [Presentation](#presentation)
+      - [Show all developers card](#show-all-developers-card)
+      - [Add card](#add-card)
+      - [Edit card](#edit-card)
+  - [Known Issues](#known-issues)
+
+## Overview
+
+The **DevHub DApp By Jni** provides a user-friendly interface to help recruiters find developers.
+
+## Getting Started
+
+Follow these steps to set up the project locally.
+
+### Prerequisites
+
+1. Node.js: Ensure Node.js is installed. Download it from [nodejs.org](https://nodejs.org/).
+2. Sui: Ensure Sui is installed. Download it from [Suibase.io](https://suibase.io/how-to/install.html)
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+  git clone https://github.com/Jni75/Julien-Nicole-Final-Project.git
+```
+
+2. Navigate to the project directory:
+
+```bash
+  cd SuiDevHubFrontEnd
+```
+
+3. Install required npm packages:
+
+```bash
+ npm install
+```
+
+## Usage
+
+1. Publish the package if devnet has been reset (see [Smart Contracts](#smart-contracts))
+
+2. Start the development server:
+
+```bash
+ npm run dev
+```
+
+3. Open your web browser and navigate to `http://localhost:5000` to access the DApp.
+
+4. Connect your SUI wallet to the DApp.
+
+5. Browse developer list, add card, and edit your contact details.
+   
+## Smart Contracts
 
 Start the devnet server: 
 
@@ -23,10 +90,14 @@ Build the package:
     cd SuiDevHub
     dsui move build
 
+![Move build](/assets/move-build.png "Move build")
+
 Test the package: 
 
     cd SuiDevHub
     dsui move test
+
+![Move test](/assets/move-test.png "Move test")
 
 Publish the package: 
 
@@ -34,13 +105,6 @@ Publish the package:
     dsui client publish --gas-budget 2000000000 .
 
 ## Frontend
-
-### Installation
-
-Install node modules: 
-
-    cd SuiDevHubFrontEnd
-    npm i
 
 ### Configuration
 
@@ -75,13 +139,6 @@ export const DEVHUB_OBJECT_TABLE_ADDRESS = "0x4f6f1da230c5b26e8b31d8392b4505476b
 
 export const NETWORK = 'devnet'
 ```
-
-### Start
-
-Start the project:
-
-    cd SuiDevHubFrontEnd
-    npm run dev
 
 ### Presentation
 
